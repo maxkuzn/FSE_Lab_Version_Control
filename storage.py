@@ -22,5 +22,8 @@ class Storage:
         else:
             return False
 
-    def add(self):
-        pass
+    def add(self, key, value):
+        if key in self.data:
+            raise Exception
+        self.data[key] = value
+
